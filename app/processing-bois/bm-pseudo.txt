@@ -1,0 +1,15 @@
+Compute function last
+i ← m-1
+j ← m-1
+Repeat
+    If P[j] = T[i] then
+        if j=0 then
+            return i        // we have a match
+        else
+            i ← i -1
+            j ← j -1
+    else
+        i ← i + m - Min(j, 1 + last[T[i]])
+        j ← m -1
+until i > n -1
+Return "no match"

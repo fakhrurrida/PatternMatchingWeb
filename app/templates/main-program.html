@@ -1,0 +1,23 @@
+{% extends "templates/public_template.html" %}
+
+{% block title %}Main · Tucil 4 Stima{% endblock %}
+
+{% block main %}
+<div class="contain">
+    <div class="row">
+        <div class="column"  style="margin-left: auto; margin-right: auto;">
+            <h1 style="color:whitesmoke">Pattern Matching Program</h1>
+        </div>
+    </div>
+</div>
+<form class="md-form" action="#" align="center">
+    <div class="file-field">
+      <div class="btn btn-primary btn-sm float-">
+        <input type="file" accept=".txt" multiple>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Pilih dokumen anda">
+      </div>
+    </div>
+  </form>
+{% endblock %}
