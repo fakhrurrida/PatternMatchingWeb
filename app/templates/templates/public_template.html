@@ -21,30 +21,38 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Main Program <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/">Program Utama<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Algoritma
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Algoritma 1</a>
-                <a class="dropdown-item" href="#">Algoritma 2</a>
+                <a class="dropdown-item" href="#" onclick="toBM()">Algoritma Boyer-Moore</a>
+                <a class="dropdown-item" href="#" onclick="toKMP()">Algoritma Knuth-Morris-Pratt</a>
+                <a class="dropdown-item" href="#" onclick="toRE()">Regular Expression</a>
+                <script>
+                  function toBM() {
+                    location.replace("whatisbm")
+                  }
+                  function toKMP() {
+                    location.replace("whatiskmp")
+                  }
+                  function toRE() {
+                    location.replace("whatisre")
+                  }
+                </script>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Just in Case Butuh Yegak</a>
+                <a class="dropdown-item" href="#">Tentang Program</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/about" tabindex="-1">Tentang Program</a>
+              <a class="nav-link" href="/about" tabindex="-1">Perihal</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
         </div>
       </nav>
-        <main>
+        <main style="margin-left: 170px; margin-right: 170px;">
             {% block main %}{% endblock %}
         </main>
     <!-- Optional JavaScript -->

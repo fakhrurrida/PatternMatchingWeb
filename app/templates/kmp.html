@@ -6,9 +6,17 @@
 <div class="contain">
     <div class="row">
         <div class="column"  style="margin-left: auto; margin-right: auto;">
-            <h1 style="color:whitesmoke">Pattern Matching Program</h1>
+            <h1 style="color:whitesmoke">Knuth-Morris-Pratt Algorithm</h1>
         </div>
     </div>
 </div>
-
+<p style="color: antiquewhite;">Algoritma Knuth-Morris-Pratt merupakan salah satu anggota pencarian string. Algoritma ini juga dikenal sebagai algoritma KMP (singkatannya), dikembangkan secara terpisah oleh Donald Knuth dan Vaughan Pratt pada tahun 1970, serta secara independen oleh James H. Morris. Ketiga penemu tersebut mempublikasikan algoritma ini pada tahun 1977. Dari nama algoritma ini kita dapat melihat dibuat berdasarkan tiga nama penemunya.
+	Secara sistematis, langkah-langkah yang dilakukan algoritma Knuth-Morris-Pratt pada saat mencocokkan string:
+1.	String pattern (kata yang dicari) akan dipecah menjadi array karakter. String text (teks, artikel, dsb) akan dipecah menjadi array karakter
+2.	Algoritma Knuth-Morris-Pratt mulai mencocokkan pattern pada awal teks.
+3.	Dari kiri ke kanan, algoritma ini akan mencocokkan karakter per karakter pattern dengan karakter di teks yang bersesuaian, sampai salah satu kondisi berikut dipenuhi:
+4.	Karakter di pattern dan di teks yang dibandingkan tidak cocok (mismatch).
+5.	Semua karakter di pattern cocok. Kemudian algoritma akan memberitahukan penemuan di posisi ini.
+6.	Algoritma kemudian menggeser pattern berdasarkan tabel next, lalu mengulangi langkah 2 sampai pattern berada di ujung teks.
+</p>
 {% endblock %}

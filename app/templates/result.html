@@ -1,0 +1,28 @@
+{% extends "templates/public_template.html" %}
+
+{% block title %}Hasil Ekstraksi · Tucil 4 Stima{% endblock %}
+
+{% block main %}
+<div class="contain">
+    <div class="row">
+        <div class="column"  style="margin-left: auto; margin-right: auto;">
+            <h1 style="color:whitesmoke">Pattern Matching Program: {{algo}}</h1>
+            <h2> </h2>
+        </div>
+    </div>
+</div>
+<ul style="margin-bottom: 15px;">
+    {% for thing in final %}
+        <div>
+            <h3 style="color: whitesmoke;">Keyword: {{keyword}}</h2>
+        </div>
+        <li style="color: antiquewhite;">Jumlah: {{thing[0]}}</li>
+        <li style="color: antiquewhite;">Waktu: {{thing[1]}}</li>
+        <li style="color: antiquewhite;">Berita: {{thing[2]}}</li>
+        <h3> </h3>
+    {% endfor %}
+  </ul>
+
+
+
+{% endblock %}

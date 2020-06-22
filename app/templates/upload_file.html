@@ -1,0 +1,55 @@
+{% extends "templates/public_template.html" %}
+
+{% block title %}Main · Tucil 4 Stima{% endblock %}
+
+{% block main %}
+<div class="contain">
+    <div class="row">
+        <div class="column"  style="margin-left: auto; margin-right: auto;">
+            <img src="https://i.pinimg.com/564x/d1/bb/54/d1bb544f499b70e442bfed3040f03f2a.jpg" alt="Italian Trulli" class="center"/>
+            <h1 style="color:whitesmoke">Pattern Matching Program</h1>
+            <h1>  </h1>
+        </div>
+    </div>
+</div>
+<form action="/" method = "POST" enctype="multipart/form-data" align="center">
+    <div class="form-group">
+      <div class="custom-file">
+        <input style="width: 6cm;" type="file" accept=".txt" class="custom-file-input" name="text" id="file" multiple>
+        <label class="custom-file-label" for="files">Select Files</label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-dark" onclick="goNext()">Upload Files</button>
+    <h2></h2>
+    <script>
+      function goNext() {
+        location.replace("about")
+      }
+    </script>
+</form>
+
+<body>
+  <form name="keyword" action="/upload-file-subm" method="POST" align="center">
+  <div>
+    <label style="color:whitesmoke;">
+    Insert your keyword: 
+    </label>
+    <input type="text" name="pattern">
+  </div>
+  <div>
+    <input style="color: whitesmoke;" type="radio" name="pilihanalgo" value="bm"><p style="color: whitesmoke; "> Algoritma Boyer-Moore </p>
+  </div>
+  <div>
+    <input style="color: whitesmoke;" type="radio" name="pilihanalgo" value="kmp"><p style="color: whitesmoke; "> Algoritma KMP </p>
+  </div>
+  <div>
+    <input style="color: whitesmoke;" type="radio" name="pilihanalgo" value="regex"><p style="color: whitesmoke; "> Algoritma Regex </p>
+  </div>
+  <h2></h2>
+  <div>
+    <input type="submit" name="pilihanalgo" value="submit">
+  </div>
+  </form>
+</body>
+
+{% endblock %}
